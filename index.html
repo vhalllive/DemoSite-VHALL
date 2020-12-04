@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html data-wf-domain="az-aurora.webflow.io" data-wf-page="5f574f48665e0e4cd7f81c7f" data-wf-site="5f574f48665e0ed6e8f81c80">
+<html>
 
 <head>
     <meta charset="utf-8" />
@@ -376,14 +376,17 @@
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbywa-RElu8fa-VpjPwGUORsU_FnHuFwXn2ZdiWc4h_EDPn7OME/exec'
         const form = document.forms['wf-form-Contact-Form']
-      
+
         form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
-            .catch(error => console.error('Error!', error.message))
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
         })
-      </script>
+    </script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
